@@ -14,4 +14,4 @@ const orderScema = new Schema({
   user: { type: Schema.Types.ObjectId, ref: users },
 });
 
-module.exports("orders", orderScema);
+module.exports = mongoose.model("orders", orderScema);

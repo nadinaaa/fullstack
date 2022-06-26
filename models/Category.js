@@ -7,4 +7,4 @@ const categoryScema = new Scema({
   user: { type: Schema.Types.ObjectId, ref: users },
 });
 
-module.exports("categories", categoryScema);
+module.exports = mongoose.model("categories", categoryScema);

@@ -13,4 +13,4 @@ const userScema = new Scema({
   },
 });
 
-module.exports("users", userScema);
+module.exports = mongoose.model("users", userScema);

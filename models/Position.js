@@ -8,4 +8,4 @@ const positionScema = new Schema({
   user: { type: Schema.Types.ObjectId, ref: users },
 });
 
-module.exports("positions", positionScema);
+module.exports = mongoose.model("positions", positionScema);

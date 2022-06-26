@@ -1,4 +1,5 @@
 const express = require("express");
+const passport = require("passport");
 const mongoose = require("mongoose");
 const bodyParser = require("body-parser");
 const authRoutes = require("./routes/auth");
@@ -13,6 +14,8 @@ mongoose
   .connect(keys.mongoURI)
   .then(() => console.log("MongoDB connected"))
   .catch((e) => console.log(e));
+app.use(passport.initialize())
+require('./middleware/passport')(passport)
 
 app.use(require("morgan")("dev"));
 app.use(require("cors")());
